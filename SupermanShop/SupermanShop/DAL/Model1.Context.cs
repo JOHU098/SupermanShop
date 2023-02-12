@@ -13,10 +13,10 @@ namespace SupermanShop.DAL
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class dbSupermanShopEntities : DbContext
+    public partial class dbSupermanShopEntities1 : DbContext
     {
-        public dbSupermanShopEntities()
-            : base("name=dbSupermanShopEntities")
+        public dbSupermanShopEntities1()
+            : base("name=dbSupermanShopEntities1")
         {
         }
     
