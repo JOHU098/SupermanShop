@@ -1663,8 +1663,6 @@
     <Content Include="Content\Site.css" />
     <Content Include="Images\bestprice.jpg" />
     <Content Include="Images\grocery.jpg" />
-    <Content Include="Images\Hua.jpg" />
-    <Content Include="Images\Hua2.jpg" />
     <Content Include="Images\Lucy Oliva Olive Oil 250ML.jpg" />
     <Content Include="Images\searchIcon.png" />
     <Content Include="Images\superman.jpg" />
