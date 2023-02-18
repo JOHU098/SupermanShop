@@ -1,4 +1,7 @@
 ﻿@model SupermanShop.Models.Home.HomeIndexViewModel
+
+@using PagedList;
+@using PagedList.Mvc;
 @{
     ViewBag.Title = "Home Page";
 }
@@ -82,26 +85,28 @@
                     <p>
                         @if (@item.Quantity > 0)
                         {
-                             <p>Available</p>
-                        }
-                        else
-                        {
-                            <p>Not Available</p>
-                        }
-                    </p>
-                    <div class="product-item-badge">
-                        @if (@item.IsFeatured == true)
-                        {
-                             <p>Featured</p>
-                        }
-                  
+                        <p>Available</p>
+                    }
+                    else
+                    {
+                        <p>Not Available</p>
+                    }
+                        </p>
+                        <div class="product-item-badge">
+                            @if (@item.IsFeatured == true)
+                            {
+                                <p>Featured</p>
+                            }
+
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    }
+        }
+</div>
+<br />
+<div class="container">
+    @Html.PagedListPager(Model.ListOfProducts, page => Url.Action("Index", new { page, search = Request.QueryString["search"] }) )
 </div>
 
 
-    
-</div>

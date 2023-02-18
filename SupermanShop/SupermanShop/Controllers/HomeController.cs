@@ -9,10 +9,10 @@ namespace SupermanShop.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index(String search)
+        public ActionResult Index(String search,int? page)
         {
             HomeIndexViewModel model = new HomeIndexViewModel();
-            return View(model.CreateModel(search));
+            return View(model.CreateModel(search,4,page));
         }
 
         public ActionResult About()
