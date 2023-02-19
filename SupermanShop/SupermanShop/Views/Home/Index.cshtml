@@ -76,7 +76,7 @@
             <div class="thumbnail product-item" style="height:300px">
 
                 <img class="img-responsive" title="Click to View Product detail"
-                     style="cursor:pointer;height:180px;width:100%"
+                     style="cursor:pointer;height:170px;width:100%"
                      src="~/ProductImg/@item.ProductImage" />
 
                 <div class="caption">
@@ -85,13 +85,18 @@
                     <p>
                         @if (@item.Quantity > 0)
                         {
-                        <p>Available</p>
-                    }
-                    else
-                    {
-                        <p>Not Available</p>
-                    }
-                        </p>
+                            using (Html.BeginForm("AddToCart", "Home", new { productId = item.ProductId }, FormMethod.Post))
+                            {
+
+                                <button type="submit" class="pull-right"><i class="fa fa-shopping-cart"></i></button>
+                            }
+                            <p>Available</p>
+                        }
+                        else
+                        {
+                             <p>Not Available</p>
+                         }
+                    </p>
                         <div class="product-item-badge">
                             @if (@item.IsFeatured == true)
                             {
